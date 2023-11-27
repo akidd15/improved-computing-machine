@@ -36,4 +36,17 @@ new CacheFirst({
 }));
 
 // TODO: Implement asset caching
+// variable for offline fallback
+const customStrategy = async ({ event }) => {
+  try {
+    return await pageCache.handle({ event });
+  } catch (error) {
+    return offlineFallback({ event });
+  }
+};
+
+registerRoute(
+  ({ request }) => request.mode === 'navigate',
+  customStrategy
+);
 registerRoute();

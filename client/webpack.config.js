@@ -20,14 +20,14 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE Text Editor'
+        title: 'jate'
       }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: 'JATE',
         short_name: 'Jate',
-        description: 'Edit Text!',
+        description: 'Take notes!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
@@ -41,10 +41,10 @@ module.exports = () => {
         ],
       }),
 
-    new InjectManifest({
-      swSrc: './src-sw.js',
-      swDest: 'src-sw.js',
-    }),
+    //new InjectManifest({
+      //swSrc: './src-sw.js',
+      //swDest: 'src-sw.js',
+  
     ],
     module: {
       rules: [
