@@ -10,7 +10,7 @@
  ## Description
    A text editor that uses javascript to take notes with syntax highlighting. 
   ## Usage
-  Visit: insert deployed link
+  Visit: https://jatetext-5233058fec19.herokuapp.com/
   ## Questions
    https://github.com/akidd15
 ## Photo
